@@ -1,5 +1,6 @@
 import tornado.web
 from pycket.session import SessionMixin
+from utils.auth import auth_user
 
 class BaseHandler(tornado.web.RequestHandler, SessionMixin):
     def get_current_user(self):
@@ -14,6 +15,7 @@ class IndexHandler(BaseHandler):
 #单个图片详情页
 class PostHandler(BaseHandler):
     def get(self,post_id):
+        result = auth_user()
         self.render('post.html', post_id=post_id)
 
 class ExploreHandler(BaseHandler):
