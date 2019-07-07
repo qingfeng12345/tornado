@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Base {% end %}</title>
+    <link rel="shortcut icon" href="{{ static_url('image/tornado.png') }}" >
+</head>
+<body>
+{{ datetime.datetime.now() }} <br>
+this is tornado
+{% block body %}
+
+{% end %}
+</body>
+</html>
