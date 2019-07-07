@@ -1,0 +1,14 @@
+{% extends base.html %}
+
+{% block title %} Index page {% end %}
+
+{% block body %}
+
+{% for path in img_list %}
+<!--<img src="{{ static_url('image/desert.jpg') }}" >-->
+<!--<img src="{{ static_url(path) }}"  width="500" height="500">-->
+<img src="{{ static_url(path) }}" >
+{% end %}
+
+<!--<img src="{{ static_url('image/thumb_desert.jpg') }}" >-->
+{% end %}

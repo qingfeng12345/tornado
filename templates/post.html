@@ -1,0 +1,11 @@
+{% extends base.html %}
+
+{% block title %} Post page {% end %}
+
+{% block body %}
+
+{% for path in img_list %}
+<img src="{{ static_url('image/{}.jpg'.format(post_id)) }}" >
+{% end %}
+
+{% end %}

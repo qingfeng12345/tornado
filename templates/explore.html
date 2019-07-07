@@ -1,0 +1,11 @@
+{% extends base.html %}
+
+{% block title %} Explore page {% end %}
+
+{% block body %}
+Explore <br>
+{% for path in img_list %}
+<img src="{{ static_url(path) }}" >
+{% end %}
+
+{% end %}
